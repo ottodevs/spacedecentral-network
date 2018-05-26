@@ -3,11 +3,12 @@
 
 source 'https://rubygems.org'
 
+ruby '2.4.0'
+
 git_source(:github) do |repo_name|
   repo_name = '#{repo_name}/#{repo_name}' unless repo_name.include?('/')
   'https://github.com/#{repo_name}.git'
 end
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
@@ -65,24 +66,26 @@ gem 'google-analytics-rails', '1.1.1'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
+  gem 'better_errors'
   gem 'byebug', platform: :mri
+  gem 'puma'
+  gem 'rspec-rails'
+end
+
+group :test do
   gem 'capybara'
   gem 'selenium-webdriver', '2.53.4'
-  gem 'puma'
-  # gem 'capybara-webkit'
 end
 
 group :development do
-  gem 'capistrano', '~> 3.6'
-  gem 'capistrano-rvm'
-  # gem 'rvm1-capistrano3'
   gem 'capistrano-bundler'
   gem 'capistrano-passenger'
-  gem 'capistrano-sidekiq'
   gem 'capistrano-rails', '~> 1.2'
-  gem 'web-console', '>= 3.3.0'
+  gem 'capistrano-rvm'
+  gem 'capistrano-sidekiq'
+  gem 'capistrano', '~> 3.6'
   gem 'listen', '~> 3.0.5'
-  gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring'
+  gem 'web-console', '>= 3.3.0'
 end
-
