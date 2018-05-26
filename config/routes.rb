@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  authenticate :user, lambda { |u| u.role == 1 } do
+    mount LetterOpenerWeb::Engine, at: "/mail" if Rails.env.development?
+    require 'sidekiq/web'
+    mount Sidekiq::Web => '/jobs'
+  end
+
   resources :publication_authors
   resources :publication_long_lats
   resources :user_careers

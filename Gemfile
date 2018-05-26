@@ -68,9 +68,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development, :test do
   gem 'better_errors'
   gem 'byebug', platform: :mri
+  gem 'capybara-email'
   gem 'database_cleaner'
   gem 'puma'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
 group :test do
@@ -87,6 +89,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-sidekiq'
   gem 'capistrano', '~> 3.6'
+  gem 'letter_opener_web', '~> 1.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring'

@@ -6,6 +6,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 
 require 'rspec/rails'
 require 'support/factory_bot'
+require 'support/mailer'
 require 'capybara/rails'
 require 'spec_helper'
 
@@ -44,4 +45,7 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
+
+  config.include(Mailer)
+  config.before(:each) { reset_emails }
 end

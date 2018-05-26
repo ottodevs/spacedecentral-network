@@ -1,7 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  
-  ActionMailer::Base.delivery_method = :smtp  
+
+  ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
     :user_name => 'spacecoop',
     :password => ENV["SPACE_EMAIL"],
@@ -11,6 +11,9 @@ Rails.application.configure do
     :authentication => :plain,
     :enable_starttls_auto => true
   }
+
+  Rails.application.routes.default_url_options[:host] = 'spacedecentral.net'
+
 
   config.action_mailer.default_url_options = { host: 'spacedecentral.net' }
 
@@ -26,7 +29,7 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-  
+
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -38,7 +41,7 @@ Rails.application.configure do
       :sender_address => %{"notifier" <info@space.coop>},
       :exception_recipients => %w{radek@space.coop yalda@space.coop}
     }
-  
+
   config.cache_store = :redis_store, {
     host: "localhost",
     port: 6379,
