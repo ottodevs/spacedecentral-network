@@ -117,6 +117,7 @@ GEM
     concurrent-ruby (1.0.5)
     connection_pool (2.2.1)
     crass (1.0.3)
+    database_cleaner (1.7.0)
     declarative (0.0.10)
     declarative-option (0.1.0)
     devise (4.4.0)
@@ -138,12 +139,18 @@ GEM
       actionmailer (>= 4.0, < 6)
       activesupport (>= 4.0, < 6)
     execjs (2.7.0)
+    factory_bot (4.8.2)
+      activesupport (>= 3.0.0)
+    factory_bot_rails (4.8.2)
+      factory_bot (~> 4.8.2)
+      railties (>= 3.0.0)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
     ffi (1.9.18-x86-mingw32)
     figaro (1.1.1)
       thor (~> 0.14)
+    formatador (0.2.5)
     friendly_id (5.2.3)
       activerecord (>= 4.0.0)
     globalid (0.4.1)
@@ -164,6 +171,20 @@ GEM
       multi_json (~> 1.11)
       os (~> 0.9)
       signet (~> 0.7)
+    guard (2.14.2)
+      formatador (>= 0.2.4)
+      listen (>= 2.7, < 4.0)
+      lumberjack (>= 1.0.12, < 2.0)
+      nenv (~> 0.1)
+      notiffany (~> 0.0)
+      pry (>= 0.9.12)
+      shellany (~> 0.0)
+      thor (>= 0.18.1)
+    guard-compat (1.2.1)
+    guard-rspec (4.7.3)
+      guard (~> 2.1)
+      guard-compat (~> 1.1)
+      rspec (>= 2.99.0, < 4.0)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -226,6 +247,7 @@ GEM
     loofah (2.1.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
+    lumberjack (1.0.13)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
     mark_it_zero (0.3.2)
@@ -250,6 +272,7 @@ GEM
     multipart-post (2.0.0)
     mysql2 (0.4.5)
     mysql2 (0.4.5-x86-mingw32)
+    nenv (0.3.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (4.2.0)
@@ -260,6 +283,9 @@ GEM
       mini_portile2 (~> 2.3.0)
     non-stupid-digest-assets (1.0.9)
       sprockets (>= 2.0)
+    notiffany (0.1.1)
+      nenv (~> 0.1)
+      shellany (~> 0.0)
     oauth2 (1.4.0)
       faraday (>= 0.8, < 0.13)
       jwt (~> 1.0)
@@ -288,6 +314,9 @@ GEM
     passenger (5.1.2)
       rack
       rake (>= 0.8.1)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
     public_suffix (3.0.1)
     puma (3.11.0)
     pygments.rb (1.2.1)
@@ -395,6 +424,7 @@ GEM
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     sexp_processor (4.10.0)
+    shellany (0.0.1)
     sidekiq (5.0.5)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
@@ -472,13 +502,16 @@ DEPENDENCIES
   capistrano-sidekiq
   capybara
   cocoon
+  database_cleaner
   devise
   draper
   exception_notification
+  factory_bot_rails
   figaro
   friendly_id
   google-analytics-rails (= 1.1.1)
   google-api-client
+  guard-rspec
   haml-rails
   high_voltage (~> 3.0.0)
   inline_svg

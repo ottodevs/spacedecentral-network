@@ -68,12 +68,15 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development, :test do
   gem 'better_errors'
   gem 'byebug', platform: :mri
+  gem 'database_cleaner'
   gem 'puma'
   gem 'rspec-rails'
 end
 
 group :test do
   gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'guard-rspec', require: false
   gem 'selenium-webdriver', '2.53.4'
 end
 
