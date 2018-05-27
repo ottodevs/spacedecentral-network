@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe SendUnreadForumRepliesDigestJob, type: :job do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:users) { create_list(:random_user, 5) }
+
+  it "sends digest emails to all users" do
+    SendUnreadForumRepliesDigestJob.perform_now(users)
+    expect(jobs_count).to eq 5
+  end
 end

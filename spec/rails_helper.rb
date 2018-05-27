@@ -8,6 +8,7 @@ require 'rspec/rails'
 require 'devise'
 require 'support/factory_bot'
 require 'support/mailer'
+require 'support/job'
 require 'capybara/rails'
 require 'spec_helper'
 
@@ -23,6 +24,13 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.infer_rake_task_specs_from_file_location!
   config.filter_rails_from_backtrace!
+  config.include(Mailer)
+  config.include(Job)
+
+  def reset_task
+    reset_emails
+    reset_jobs
+  end
 
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
@@ -30,6 +38,8 @@ RSpec.configure do |config|
 
   config.before(:each) do
     DatabaseCleaner.strategy = :transaction
+    reset_task
+
   end
 
   config.before(:each, truncation: true) do
@@ -48,8 +58,6 @@ RSpec.configure do |config|
 
   config.after(:each) do
     DatabaseCleaner.clean
+    reset_task
   end
-
-  config.include(Mailer)
-  config.before(:each) { reset_emails }
 end
