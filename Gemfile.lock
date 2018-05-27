@@ -524,6 +524,7 @@ DEPENDENCIES
   draper
   exception_notification
   factory_bot_rails
+  faker!
   fantaskspec
   figaro
   friendly_id

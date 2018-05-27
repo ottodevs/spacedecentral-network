@@ -70,6 +70,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'capybara-email'
   gem 'database_cleaner'
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
   gem 'puma'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
