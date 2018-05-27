@@ -147,6 +147,9 @@ GEM
     factory_bot_rails (4.8.2)
       factory_bot (~> 4.8.2)
       railties (>= 3.0.0)
+    fantaskspec (1.1.0)
+      rake (>= 11.0)
+      rspec (~> 3.0)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
@@ -521,6 +524,7 @@ DEPENDENCIES
   draper
   exception_notification
   factory_bot_rails
+  fantaskspec
   figaro
   friendly_id
   google-analytics-rails (= 1.1.1)

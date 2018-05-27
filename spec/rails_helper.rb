@@ -15,10 +15,13 @@ Capybara.server = :puma, { Silent: true }
 
 ActiveRecord::Migration.maintain_test_schema!
 
+Rails.application.load_tasks
+
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = false
   config.infer_spec_type_from_file_location!
+  config.infer_rake_task_specs_from_file_location!
   config.filter_rails_from_backtrace!
 
   config.before(:suite) do

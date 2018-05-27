@@ -80,6 +80,7 @@ group :test do
   gem 'factory_bot_rails'
   gem 'guard-rspec', require: false
   gem 'selenium-webdriver', '2.53.4'
+  gem 'fantaskspec'
 end
 
 group :development do
