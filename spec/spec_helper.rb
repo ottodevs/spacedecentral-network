@@ -1,5 +1,4 @@
-# not really sure if needed
-require 'capybara/rspec'
+require 'capybara/email/rspec'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

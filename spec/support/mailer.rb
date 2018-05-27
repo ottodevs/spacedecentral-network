@@ -4,7 +4,11 @@ module Mailer
   end
 
   def reset_emails
-    ActionMailer::Base.deliveries = []
+    ActionMailer::Base.deliveries.clear
+  end
+
+  def deliveries_count
+    ActionMailer::Base.deliveries.count
   end
 
   def extract_confirmation_token(email)
