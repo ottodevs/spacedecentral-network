@@ -12,14 +12,14 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 gem 'mysql2', '0.4.5'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer', platforms: :ruby
 gem 'non-stupid-digest-assets'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.3.7'
 gem 'angularjs-rails'
 gem 'momentjs-rails'
 gem 'jbuilder', '~> 2.5'
@@ -29,7 +29,7 @@ gem 'inline_svg'
 gem 'rmagick'
 gem "cocoon"
 
-gem 'mark_it_zero' #, git: 'git@github.com:khacluan/mark_it_zero.git', tag: 'v0.3.3'
+gem 'mark_it_zero' , '>= 0.3.2' #, git: 'git@github.com:khacluan/mark_it_zero.git', tag: 'v0.3.3'
 gem 'redcarpet'
 
 gem 'turbolinks', '~> 5'
@@ -52,7 +52,7 @@ gem 'exception_notification'
 gem 'whenever', :require => false
 
 gem 'figaro'
-gem 'jquery-fileupload-rails'
+gem 'jquery-fileupload-rails', '>= 0.4.7'
 gem 'draper'
 gem 'aasm'
 gem 'kaminari'
@@ -81,8 +81,8 @@ group :development do
   gem 'capistrano-sidekiq'
   gem 'capistrano-rails', '~> 1.2'
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.0.5'
+  gem 'listen', '~> 3.0.8'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen', '~> 2.0.1'
 end
 
