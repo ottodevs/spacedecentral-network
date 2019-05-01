@@ -19,7 +19,7 @@ gem 'non-stupid-digest-assets'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.0'
 gem 'angularjs-rails'
 gem 'momentjs-rails'
 gem 'jbuilder', '~> 2.5'
@@ -46,7 +46,7 @@ gem 'omniauth-google-oauth2'
 gem 'signet'
 gem 'google-api-client'
 
-gem 'passenger', '5.1.2'
+gem 'passenger', '5.3.2'
 gem 'exception_notification'
 
 gem 'whenever', :require => false
