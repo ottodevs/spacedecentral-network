@@ -10,32 +10,32 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.1'
+gem 'rails', '~> 5.0.6'
 gem 'mysql2', '0.4.5'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer', platforms: :ruby
 gem 'non-stupid-digest-assets'
 
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
+gem 'jquery-rails', '>= 4.3.1'
+gem 'jquery-ui-rails', '>= 6.0.1'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'angularjs-rails'
-gem 'momentjs-rails'
+gem 'momentjs-rails', '>= 2.17.1'
 gem 'jbuilder', '~> 2.5'
-gem 'haml-rails'
+gem 'haml-rails', '>= 1.0.0'
 
 gem 'inline_svg'
 gem 'rmagick'
 gem "cocoon"
 
-gem 'mark_it_zero' #, git: 'git@github.com:khacluan/mark_it_zero.git', tag: 'v0.3.3'
+gem 'mark_it_zero' , '>= 0.3.2' #, git: 'git@github.com:khacluan/mark_it_zero.git', tag: 'v0.3.3'
 gem 'redcarpet'
 
 gem 'turbolinks', '~> 5'
 gem 'paperclip', '~> 5.2.0'
 gem 'remotipart', '~> 1.2'
-gem 'devise'
+gem 'devise', '>= 4.4.0'
 gem 'sidekiq'
 gem 'redis', '~> 3.3.5'
 gem 'redis-rails'
@@ -52,12 +52,12 @@ gem 'exception_notification'
 gem 'whenever', :require => false
 
 gem 'figaro'
-gem 'jquery-fileupload-rails'
+gem 'jquery-fileupload-rails', '>= 0.4.7'
 gem 'draper'
 gem 'aasm'
 gem 'kaminari'
 gem 'high_voltage', '~> 3.0.0'
-gem 'jquery-slick-rails'
+gem 'jquery-slick-rails', '>= 1.8.1'
 
 gem 'google-analytics-rails', '1.1.1'
 
@@ -73,14 +73,14 @@ group :development, :test do
 end
 
 group :development do
-  gem 'capistrano', '~> 3.6'
-  gem 'capistrano-rvm'
+  gem 'capistrano', '~> 3.10', '>= 3.10.1'
+  gem 'capistrano-rvm', '>= 0.1.2'
   # gem 'rvm1-capistrano3'
-  gem 'capistrano-bundler'
-  gem 'capistrano-passenger'
-  gem 'capistrano-sidekiq'
-  gem 'capistrano-rails', '~> 1.2'
-  gem 'web-console', '>= 3.3.0'
+  gem 'capistrano-bundler', '>= 1.3.0'
+  gem 'capistrano-passenger', '>= 0.2.0'
+  gem 'capistrano-sidekiq', '>= 0.20.0'
+  gem 'capistrano-rails', '~> 1.3', '>= 1.3.1'
+  gem 'web-console', '>= 3.5.1'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
