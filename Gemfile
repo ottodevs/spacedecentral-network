@@ -10,36 +10,36 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.1'
+gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 gem 'mysql2', '0.4.5'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer', platforms: :ruby
 gem 'non-stupid-digest-assets'
 
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
+gem 'jquery-rails', '>= 4.3.1'
+gem 'jquery-ui-rails', '>= 6.0.1'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'angularjs-rails'
-gem 'momentjs-rails'
-gem 'jbuilder', '~> 2.5'
-gem 'haml-rails'
+gem 'momentjs-rails', '>= 2.17.1'
+gem 'jbuilder', '~> 2.7', '>= 2.7.0'
+gem 'haml-rails', '>= 1.0.0'
 
-gem 'inline_svg'
+gem 'inline_svg', '>= 1.3.1'
 gem 'rmagick'
 gem "cocoon"
 
-gem 'mark_it_zero' #, git: 'git@github.com:khacluan/mark_it_zero.git', tag: 'v0.3.3'
+gem 'mark_it_zero' , '>= 0.3.2' #, git: 'git@github.com:khacluan/mark_it_zero.git', tag: 'v0.3.3'
 gem 'redcarpet'
 
 gem 'turbolinks', '~> 5'
-gem 'paperclip', '~> 5.2.0'
+gem 'paperclip', '~> 5.2.1'
 gem 'remotipart', '~> 1.2'
-gem 'devise'
+gem 'devise', '>= 4.4.2'
 gem 'sidekiq'
 gem 'redis', '~> 3.3.5'
-gem 'redis-rails'
-gem 'friendly_id'
+gem 'redis-rails', '>= 5.0.2'
+gem 'friendly_id', '>= 5.2.3'
 
 gem 'aws-sdk', '= 2.10.1'
 gem 'omniauth-google-oauth2'
@@ -47,17 +47,17 @@ gem 'signet'
 gem 'google-api-client'
 
 gem 'passenger', '5.1.2'
-gem 'exception_notification'
+gem 'exception_notification', '>= 4.2.2'
 
 gem 'whenever', :require => false
 
 gem 'figaro'
-gem 'jquery-fileupload-rails'
-gem 'draper'
+gem 'jquery-fileupload-rails', '>= 0.4.7'
+gem 'draper', '>= 3.0.1'
 gem 'aasm'
-gem 'kaminari'
+gem 'kaminari', '>= 1.1.1'
 gem 'high_voltage', '~> 3.0.0'
-gem 'jquery-slick-rails'
+gem 'jquery-slick-rails', '>= 1.8.1'
 
 gem 'google-analytics-rails', '1.1.1'
 
@@ -80,9 +80,9 @@ group :development do
   gem 'capistrano-passenger'
   gem 'capistrano-sidekiq'
   gem 'capistrano-rails', '~> 1.2'
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 3.5.1'
   gem 'listen', '~> 3.0.5'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring', '>= 2.0.2'
+  gem 'spring-watcher-listen', '~> 2.0.1'
 end
 
