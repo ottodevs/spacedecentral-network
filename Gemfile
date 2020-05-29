@@ -55,7 +55,7 @@ gem 'figaro'
 gem 'jquery-fileupload-rails'
 gem 'draper'
 gem 'aasm'
-gem 'kaminari'
+gem 'kaminari', '>= 1.2.1'
 gem 'high_voltage', '~> 3.0.0'
 gem 'jquery-slick-rails'
 
