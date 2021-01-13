@@ -29,8 +29,8 @@ gem 'inline_svg'
 gem 'rmagick'
 gem "cocoon"
 
-gem 'mark_it_zero' #, git: 'git@github.com:khacluan/mark_it_zero.git', tag: 'v0.3.3'
-gem 'redcarpet'
+gem 'mark_it_zero' , '>= 0.3.2' #, git: 'git@github.com:khacluan/mark_it_zero.git', tag: 'v0.3.3'
+gem 'redcarpet', '>= 3.5.1'
 
 gem 'turbolinks', '~> 5'
 gem 'paperclip', '~> 5.2.0'
@@ -42,7 +42,7 @@ gem 'redis-rails'
 gem 'friendly_id'
 
 gem 'aws-sdk', '= 2.10.1'
-gem 'omniauth-google-oauth2'
+gem 'omniauth-google-oauth2', '>= 0.5.2'
 gem 'signet'
 gem 'google-api-client'
 
