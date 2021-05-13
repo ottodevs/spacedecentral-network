@@ -68,7 +68,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'capybara'
   gem 'selenium-webdriver', '2.53.4'
-  gem 'puma'
+  gem 'puma', '>= 4.3.8'
   # gem 'capybara-webkit'
 end
 
