@@ -43,8 +43,8 @@ gem 'friendly_id'
 
 gem 'aws-sdk', '= 2.10.1'
 gem 'omniauth-google-oauth2'
-gem 'signet'
-gem 'google-api-client'
+gem 'signet', '>= 0.8.1'
+gem 'google-api-client', '>= 0.19.3'
 
 gem 'passenger', '5.1.2'
 gem 'exception_notification'
@@ -66,7 +66,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'capybara'
+  gem 'capybara', '>= 2.17.0'
   gem 'selenium-webdriver', '2.53.4'
   gem 'puma'
   # gem 'capybara-webkit'
